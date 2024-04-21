@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .scrollToTop {
+      transition: opacity 0.3s ease-out;
+    }
+
+    .fade-right {
+      animation: fadeRightAnimation 0.3s ease-out forwards;
+    }
+
+    .fade-out-right {
+      animation: fadeOutRightAnimation 0.1s ease-out forwards;
+    }
+
+    @keyframes fadeRightAnimation {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeOutRightAnimation {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+  </style>
+  <body class="scroll-smooth">
+    <header
+      class="flex justify-between items-center blur-sm bg-gray-700 shadow-lg p-6"
+    >
+      <div class="logo">
+        <h1
+          class="text-6xl p-3 italic font-bold text-blue-200 drop-shadow-md cursor-default"
+          id="myName"
+        >
+          &lt;Nomer /&gt;
+        </h1>
+        <!-- <img src="images/vinyl.png" alt="" width="100px" /> -->
+      </div>
+      <ul class="flex items-center gap-4">
+        <li class="p-6 text-3xl">
+          <a
+            href="#About"
+            class="transition text-blue-200 font-medium hover:shadow-blue-800 hover:text-blue-400"
+            >About</a
+          >
+        </li>
+        <li class="p-6 text-3xl">
+          <a
+            href="#Skills"
+            class="transition text-blue-200 font-medium hover:drop-shadow-blue-800 hover:text-blue-400"
+            >Skills</a
+          >
+        </li>
+        <li class="p-6 text-3xl">
+          <a
+            href="#Project"
+            class="transition text-blue-200 font-medium hover:drop-shadow-blue-800 hover:text-blue-400"
+            >Projects</a
+          >
+        </li>
+        <li class="p-6 text-3xl">
+          <a
+            href="#Contact"
+            class="transition text-blue-200 font-medium hover:drop-shadow-blue-800 hover:text-blue-400"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section
+        class="h-screen flex justify-center items-center flex-col gap-20 bg-gradient-to-b from-gray-700 to-gray-800"
+      >
+        <h1
+          class="text-8xl font-medium text-white drop-shadow"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-duration="3000"
+        >
+          <span class="text-blue-200">Discover your</span>
+          <mark class="bg-blue-200 rounded-lg text-gray-800"
+            >hidden treasure</mark
+          >
+        </h1>
+        <button
+          class="py-4 mt-20 rounded-lg bg-blue-400 font-medium text-3xl transition duration-3000 hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-duration="3000"
+        >
+          <a href="#About" class="py-2 px-20">Dive in?</a>
+        </button>
+      </section>
+      <section
+        class="bg-gradient-to-b from-gray-800 to-gray-900 overflow-x-hidden"
+        id="About"
+      >
+        <div
+          class="flex flex-wrap justify-start items-center gap-20 p-20 my-28"
+        >
+          <card class="flex flex-1 justify-center">
+            <img
+              src="images/myPic(1).jpg"
+              alt="Nomer's picture"
+              width="500px"
+              class="rounded-full border-4 border-blue-300 hover:border-blue-500 p-3"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            />
+            <!-- <span>
+              <h1 class="text-2xl text-white p-4">About this person</h1>
+            </span> -->
+          </card>
+          <div
+            class="flex flex-1 flex-col"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="flex flex-col gap-4">
+              <h1 class="text-6xl text-white font-medium text-blue-300">
+                <i>Nomer S. Dela Cruz Jr. </i>
+              </h1>
+              <h4 class="text-3xl font-medium text-blue-300">
+                Software Developer
+              </h4>
+            </div>
+            <p class="text-3xl mt-10 text-blue-200 leading-loose text-justify">
+              "Currently third year college, studying
+              <i>Bachelor of Science in Information Technology</i>. Interested
+              in front-end stuff and minimalist when it comes to design. I had
+              an experience on doing a full-stack website for our school project
+              that enhanced my knowledge and understanding on how front-end and
+              back-end works."
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-900 p-28 flex flex-col" id="Skills">
+        <h1 class="text-6xl font-medium text-blue-300 text-center">
+          Technologies
+        </h1>
+        <div class="flex flex-wrap gap-20 justify-evenly mt-20">
+          <div class="flex flex-col">
+            <img src="images/html.svg" alt="html" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://www.w3schools.com/html/default.asp">HTML 5</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/css.svg" alt="css" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://www.w3schools.com/css/default.asp">CSS 3</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/tailwindcss.svg" alt="tailwind" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://tailwindcss.com/">Tailwind CSS</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/bootstrap.svg" alt="bootstrap" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://getbootstrap.com/">Bootstrap</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/php.svg" alt="php" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://www.php.net/">PHP</a>
+            </h1>
+          </div>
+          <div class="flex flex-col justify-between">
+            <div class="flex items-center h-full">
+              <img
+                src="images/phpmyadmin.png"
+                alt="mysql"
+                width="240"
+                class="items-center"
+              />
+            </div>
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://www.phpmyadmin.net/">phpMyAdmin</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/javascript.svg" alt="mysql" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://www.javascript.com/">Javascript</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/react.svg" alt="react" width="" class="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://react.dev/">React</a>
+            </h1>
+          </div>
+          <div class="flex flex-col">
+            <img src="images/chatgpt.svg" alt="chatgpt" width="" />
+            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+              <a href="https://chat.openai.com/">Chatgpt</a>
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray-900 p-28" id="Project">
+        <h1 class="text-6xl text-blue-300 font-medium text-center mb-20">
+          Projects
+        </h1>
+        <div class="flex justify-center">
+          <div
+            class="rounded"
+            style="width: 800px"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <a href="images/blogsite.png" class="image-link">
+              <img
+                src="images/blogsite.png"
+                alt=""
+                width="800"
+                class="rounded-t-lg"
+              />
+            </a>
+            <h1
+              class="text-3xl text-blue-300 text-justify leading-loose bg-gray-800 rounded-b-xl p-10"
+            >
+              Euphoric Mind a blog website where people are engage to post their
+              questions and opinions; also a social media platform to post their
+              pictures. It has upvotes and downvotes: comments and answers for
+              questions that engage interaction with other users.
+            </h1>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gradient-to-b from-gray-900 to-black" id="Contact">
+      <div class="flex justify-center p-20">
+        <ul class="flex flex-wrap justify-center items-center gap-20">
+          <li class="text-2xl">
+            <a
+              href="https://github.com/sushibake69"
+              class="text-blue-300 flex items-center gap-4"
+              ><img src="images/github.svg" alt="github" />sushibake69</a
+            >
+          </li>
+          <li class="text-2xl">
+            <a
+              href="https://www.linkedin.com/in/nomer-dela-cruz-jr-493027284/"
+              class="text-blue-300 flex items-center gap-4"
+              ><img src="images/linked-in.svg" alt="" />Nomer Dela Cruz Jr.</a
+            >
+          </li>
+          <li class="text-2xl text-blue-300 flex items-center gap-4">
+            <img src="images/gmail.svg" alt="" />nomerdelacruz0330@gmail.com
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="scrollToTop fixed bottom-5 right-5">
+      <button
+        class="text-slate-500 text-2xl font-medium bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 p-4 rounded-lg shadow-md"
+        id="scrollToTopBtn"
+      >
+        Scroll to top
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // Function to check if the user has scrolled halfway down the body
+      function checkScroll() {
+        const scrollHeight = document.body.scrollHeight;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > scrollHeight / 2) {
+          // If scrolled more than halfway down, show the button with fade-in from right
+          scrollToTopBtn.classList.remove("hidden");
+          scrollToTopBtn.classList.add("fade-right");
+          scrollToTopBtn.classList.remove("fade-out-right");
+        } else {
+          // Otherwise, hide the button with fade-out to right
+          scrollToTopBtn.classList.add("fade-out-right");
+          setTimeout(() => {
+            scrollToTopBtn.classList.add("hidden");
+          }, 100); // Adjust the timeout to match the animation duration
+        }
+      }
+
+      // Call the checkScroll function once initially
+      checkScroll();
+
+      // Add a scroll event listener to check the scroll position
+      window.addEventListener("scroll", checkScroll);
+
+      // Function to scroll to the top when the button is clicked
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".image-link").magnificPopup({ type: "image" });
+      });
+    </script>
+  </body>
+</html>
