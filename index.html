@@ -19,6 +19,17 @@
       scroll-behavior: smooth;
     }
 
+    .menu {
+      display: block;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Style for the hamburger icon */
+    .menu:hover {
+      cursor: pointer;
+    }
+
     .scrollToTop {
       transition: opacity 0.3s ease-out;
     }
@@ -55,40 +66,53 @@
   </style>
   <body class="scroll-smooth">
     <header
-      class="flex justify-between items-center blur-sm bg-gray-700 shadow-lg p-6"
+      class="flex flex-col md:flex-row justify-between items-center blur-sm bg-gray-700 shadow-lg p-6"
     >
-      <div class="logo">
-        <h1
-          class="text-6xl p-3 italic font-bold text-blue-200 drop-shadow-md cursor-default"
-          id="myName"
-        >
-          &lt;Nomer /&gt;
-        </h1>
-        <!-- <img src="images/vinyl.png" alt="" width="100px" /> -->
+      <div class="flex justify-between items-center w-full md:w-auto">
+        <div class="logo">
+          <h1
+            class="text-6xl p-3 italic font-bold text-blue-200 drop-shadow-md cursor-default"
+          >
+            <span id="myName">&lt;Nomer /&gt;</span>
+          </h1>
+          <!-- <img src="images/vinyl.png" alt="" width="100px" /> -->
+        </div>
+        <button id="hamburger" class="md:hidden text-white">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="menu w-10 h-10">
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
-      <ul class="flex items-center gap-4">
-        <li class="p-6 text-3xl">
+      <ul
+        class="hidden md:flex flex-col md:flex-row items-center gap-4 md:gap-8 md:mr-0"
+        id="navLinks"
+      >
+        <li class="p-3 md:p-6 text-lg md:text-3xl">
           <a
             href="#About"
             class="transition text-blue-200 font-medium hover:shadow-blue-800 hover:text-blue-400"
             >About</a
           >
         </li>
-        <li class="p-6 text-3xl">
+        <li class="p-3 md:p-6 text-lg md:text-3xl">
           <a
             href="#Skills"
             class="transition text-blue-200 font-medium hover:drop-shadow-blue-800 hover:text-blue-400"
             >Skills</a
           >
         </li>
-        <li class="p-6 text-3xl">
+        <li class="p-3 md:p-6 text-lg md:text-3xl">
           <a
             href="#Project"
             class="transition text-blue-200 font-medium hover:drop-shadow-blue-800 hover:text-blue-400"
             >Projects</a
           >
         </li>
-        <li class="p-6 text-3xl">
+        <li class="p-3 md:p-6 text-lg md:text-3xl">
           <a
             href="#Contact"
             class="transition text-blue-200 font-medium hover:drop-shadow-blue-800 hover:text-blue-400"
@@ -97,64 +121,59 @@
         </li>
       </ul>
     </header>
+
     <main>
       <section
         class="h-screen flex justify-center items-center flex-col gap-20 bg-gradient-to-b from-gray-700 to-gray-800"
       >
         <h1
-          class="text-8xl font-medium text-white drop-shadow"
+          class="text-8xl font-medium text-white drop-shadow text-center md:text-left"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
           data-aos-duration="3000"
         >
           <span class="text-blue-200">Discover your</span>
-          <mark class="bg-blue-200 rounded-lg text-gray-800"
+          <mark class="bg-blue-200 rounded-lg text-gray-800 leading-loose"
             >hidden treasure</mark
           >
         </h1>
         <button
           class="py-4 mt-20 rounded-lg bg-blue-400 font-medium text-3xl transition duration-3000 hover:bg-blue-500 hover:shadow-xl hover:shadow-blue-500"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-bottom"
-          data-aos-duration="3000"
         >
           <a href="#About" class="py-2 px-20">Dive in?</a>
         </button>
       </section>
+
       <section
         class="bg-gradient-to-b from-gray-800 to-gray-900 overflow-x-hidden"
         id="About"
       >
         <div
-          class="flex flex-wrap justify-start items-center gap-20 p-20 my-28"
+          class="flex flex-col md:flex-row justify-center items-center p-8 md:p-20 my-28"
         >
-          <card class="flex flex-1 justify-center">
-            <img
-              src="images/myPic(1).jpg"
-              alt="Nomer's picture"
-              width="500px"
-              class="rounded-full border-4 border-blue-300 hover:border-blue-500 p-3"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            />
-            <!-- <span>
-              <h1 class="text-2xl text-white p-4">About this person</h1>
-            </span> -->
-          </card>
-          <div
-            class="flex flex-1 flex-col"
-            data-aos="fade-left"
+          <img
+            src="images/myPic(1).jpg"
+            alt="Nomer's picture"
+            class="rounded-full border-4 border-blue-300 hover:border-blue-500 p-3 md:w-800 mb-8 md:mb-0 md:mr-20"
+            width="500px"
+            data-aos="fade-right"
             data-aos-duration="1000"
+          />
+          <div
+            class="flex flex-col justify-start items-start text-left md:text-left md:w-1/2"
           >
-            <div class="flex flex-col gap-4">
-              <h1 class="text-6xl text-white font-medium text-blue-300">
-                <i>Nomer S. Dela Cruz Jr. </i>
-              </h1>
-              <h4 class="text-3xl font-medium text-blue-300">
-                Software Developer
-              </h4>
-            </div>
-            <p class="text-3xl mt-10 text-blue-200 leading-loose text-justify">
+            <h1
+              class="text-4xl md:text-6xl font-medium text-white text-blue-300 mb-4"
+            >
+              <i>Nomer S. Dela Cruz Jr.</i>
+            </h1>
+            <h4 class="text-xl md:text-3xl font-medium text-blue-300 mb-6">
+              Software Developer
+            </h4>
+            <p
+              class="text-lg md:text-3xl leading-loose text-blue-200 text-justify"
+              style="line-height: 2"
+            >
               "Currently third year college, studying
               <i>Bachelor of Science in Information Technology</i>. Interested
               in front-end stuff and minimalist when it comes to design. I had
@@ -165,129 +184,156 @@
           </div>
         </div>
       </section>
-      <section class="bg-gray-900 p-28 flex flex-col" id="Skills">
-        <h1 class="text-6xl font-medium text-blue-300 text-center">
+
+      <section class="bg-gray-900 p-8 md:p-28 flex flex-col" id="Skills">
+        <h1
+          class="text-4xl text-center md:text-6xl font-medium text-blue-300 md:text-center"
+        >
           Technologies
         </h1>
-        <div class="flex flex-wrap gap-20 justify-evenly mt-20">
-          <div class="flex flex-col">
+        <div
+          class="flex flex-wrap gap-8 md:gap-20 justify-center md:justify-evenly mt-12 md:mt-20"
+        >
+          <div class="flex flex-col items-center md:items-center">
             <img src="images/html.svg" alt="html" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://www.w3schools.com/html/default.asp">HTML 5</a>
             </h1>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center md:items-center">
             <img src="images/css.svg" alt="css" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://www.w3schools.com/css/default.asp">CSS 3</a>
             </h1>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center md:items-center">
             <img src="images/tailwindcss.svg" alt="tailwind" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://tailwindcss.com/">Tailwind CSS</a>
             </h1>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center md:items-center">
             <img src="images/bootstrap.svg" alt="bootstrap" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://getbootstrap.com/">Bootstrap</a>
             </h1>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center md:items-center">
             <img src="images/php.svg" alt="php" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://www.php.net/">PHP</a>
             </h1>
           </div>
-          <div class="flex flex-col justify-between">
-            <div class="flex items-center h-full">
-              <img
-                src="images/phpmyadmin.png"
-                alt="mysql"
-                width="240"
-                class="items-center"
-              />
+          <div class="flex flex-col items-center md:items-center">
+            <div class="h-full flex items-center">
+              <img src="images/phpmyadmin.png" alt="mysql" width="240" />
             </div>
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://www.phpmyadmin.net/">phpMyAdmin</a>
             </h1>
           </div>
-          <div class="flex flex-col">
-            <img src="images/javascript.svg" alt="mysql" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+          <div class="flex flex-col items-center md:items-center">
+            <img src="images/javascript.svg" alt="javascript" width="" />
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://www.javascript.com/">Javascript</a>
             </h1>
           </div>
-          <div class="flex flex-col">
-            <img src="images/react.svg" alt="react" width="" class="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+          <div class="flex flex-col items-center md:items-center">
+            <img src="images/react.svg" alt="react" width="" />
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://react.dev/">React</a>
             </h1>
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col items-center md:items-center">
             <img src="images/chatgpt.svg" alt="chatgpt" width="" />
-            <h1 class="text-4xl text-blue-300 hover:text-blue-400 text-center">
+            <h1
+              class="text-2xl md:text-4xl text-blue-300 hover:text-blue-400 mt-2"
+            >
               <a href="https://chat.openai.com/">Chatgpt</a>
             </h1>
           </div>
         </div>
       </section>
-      <section class="bg-gray-900 p-28" id="Project">
-        <h1 class="text-6xl text-blue-300 font-medium text-center mb-20">
+
+      <section class="bg-gray-900 p-8 md:p-28" id="Project">
+        <h1
+          class="text-4xl md:text-6xl text-blue-300 font-medium text-center md:text-center mb-12 md:mb-20"
+        >
           Projects
         </h1>
         <div class="flex justify-center">
           <div
-            class="rounded"
-            style="width: 800px"
+            class="w-full md:w-3/4 lg:w-1/2 rounded-lg overflow-hidden"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
             <a href="images/blogsite.png" class="image-link">
               <img
                 src="images/blogsite.png"
-                alt=""
+                alt="Euphoric Mind Project"
                 width="800"
                 class="rounded-t-lg"
               />
             </a>
             <h1
-              class="text-3xl text-blue-300 text-justify leading-loose bg-gray-800 rounded-b-xl p-10"
+              class="text-lg md:text-3xl text-blue-300 text-center md:text-left md:leading-loose md:text-justify bg-gray-800 rounded-b-lg p-6 md:p-10"
             >
-              Euphoric Mind a blog website where people are engage to post their
-              questions and opinions; also a social media platform to post their
-              pictures. It has upvotes and downvotes: comments and answers for
-              questions that engage interaction with other users.
+              Euphoric Mind is a blog website where people can engage by posting
+              their questions and opinions. It also serves as a social media
+              platform for users to share pictures. The platform includes
+              features such as upvotes and downvotes, comments, and answers to
+              questions, fostering interaction among users.
             </h1>
           </div>
         </div>
       </section>
     </main>
     <footer class="bg-gradient-to-b from-gray-900 to-black" id="Contact">
-      <div class="flex justify-center p-20">
-        <ul class="flex flex-wrap justify-center items-center gap-20">
-          <li class="text-2xl">
+      <div class="flex justify-center p-8 md:p-20">
+        <ul class="flex flex-wrap justify-center items-center gap-4 md:gap-20">
+          <li class="text-sm md:text-2xl">
             <a
               href="https://github.com/sushibake69"
-              class="text-blue-300 flex items-center gap-4"
-              ><img src="images/github.svg" alt="github" />sushibake69</a
+              class="text-blue-300 flex items-center gap-2"
             >
+              <img src="images/github.svg" alt="GitHub" width="24" />
+              sushibake69
+            </a>
           </li>
-          <li class="text-2xl">
+          <li class="text-sm md:text-2xl">
             <a
               href="https://www.linkedin.com/in/nomer-dela-cruz-jr-493027284/"
-              class="text-blue-300 flex items-center gap-4"
-              ><img src="images/linked-in.svg" alt="" />Nomer Dela Cruz Jr.</a
+              class="text-blue-300 flex items-center gap-2"
             >
+              <img src="images/linked-in.svg" alt="LinkedIn" width="24" />
+              Nomer Dela Cruz Jr.
+            </a>
           </li>
-          <li class="text-2xl text-blue-300 flex items-center gap-4">
-            <img src="images/gmail.svg" alt="" />nomerdelacruz0330@gmail.com
+          <li class="text-sm md:text-2xl text-blue-300 flex items-center gap-2">
+            <img src="images/gmail.svg" alt="Email" width="24" />
+            nomerdelacruz0330@gmail.com
           </li>
         </ul>
       </div>
     </footer>
-    <div class="scrollToTop fixed bottom-5 right-5">
+
+    <div class="scrollToTop fixed bottom-5 right-5 hidden md:block">
       <button
         class="text-slate-500 text-2xl font-medium bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 p-4 rounded-lg shadow-md"
         id="scrollToTopBtn"
@@ -304,6 +350,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navLinks");
+
+        // Toggle the visibility of the navigation links when hamburger menu is clicked
+        hamburger.addEventListener("click", function () {
+          navLinks.classList.toggle("hidden");
+        });
+      });
+    </script>
 
     <script>
       const scrollToTopBtn = document.getElementById("scrollToTopBtn");
